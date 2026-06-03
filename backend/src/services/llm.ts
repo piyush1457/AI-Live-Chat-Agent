@@ -6,7 +6,7 @@ const apiKey = process.env.Groq_API_KEY || process.env.GROQ_API_KEY || '';
 
 const groq = new Groq({ apiKey });
 
-const systemPrompt = `You are Maya, a friendly support agent for ShopEasy, a small e-commerce store.
+const systemPrompt = `You are ChiLLGuy, a friendly support agent for ShopEasy, a small e-commerce store.
 
 STORE KNOWLEDGE:
 - Shipping: Free shipping above ₹999. Standard 3-5 days. Express 1-2 days for ₹149. India only.
