@@ -20,24 +20,9 @@ export function ChatWidget({ isOpenProp, onToggle }: { isOpenProp?: boolean, onT
   return (
     <div style={{ position: 'fixed', bottom: '30px', right: '30px', zIndex: 9999 }}>
       {/* Expanded Panel */}
-      <div style={{
-        position: 'absolute',
-        bottom: '80px',
-        right: '0',
-        width: '380px',
-        height: '560px',
-        background: '#1a1a2e',
-        border: '1px solid rgba(255,255,255,0.08)',
-        borderRadius: '24px',
-        boxShadow: '0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.05), inset 0 1px 0 rgba(255,255,255,0.1)',
-        overflow: 'hidden',
+      <div className={`chat-panel ${isOpen ? 'open' : ''}`} style={{
         transformOrigin: 'bottom right',
-        transform: isOpen ? 'scale(1) translateY(0)' : 'scale(0.8) translateY(20px)',
-        opacity: isOpen ? 1 : 0,
         pointerEvents: isOpen ? 'auto' : 'none',
-        transition: 'all 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
-        display: 'flex',
-        flexDirection: 'column'
       }}>
         {/* Header */}
         <div style={{
